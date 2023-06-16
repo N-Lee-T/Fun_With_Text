@@ -1,0 +1,37 @@
+{% extends 'base.html' %} 
+
+{% block head %}  
+<title> Welcome to $$$ </title>
+{% endblock %}
+
+{% block body %} 
+
+<div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        {% for idea in ideas %}
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h4>{{ idea.prompt }}</h4>
+              <br>
+              <div class="card-text">
+                <p>{{ idea.pitch }}</p>
+                <br>
+                <p>{{ idea.one }}, {{ idea.two }}, {{ idea.three }}</p>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="idea_form">
+        <form action="/action" method="GET" class="no_button">
+            <input class="go_button" type="submit" value="Go back.">
+        </form>
+    </div>
+</div>
+ {% endblock %}

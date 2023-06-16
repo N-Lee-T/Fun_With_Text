@@ -1,0 +1,65 @@
+{% extends 'base.html' %} 
+
+{% block head %}  
+<title> Welcome to $$$ </title>
+{% endblock %}
+
+{% block body %} 
+
+
+<div class="cols">
+    <p class="popup"><script> alert("Now you can customize the responses with an edit button!")</script></p>
+    <h2>Here's the idea you requested. </h2>
+</div>
+<h3>Original prompt: {{ idea.prompt }}</h3>
+<br>
+<h4>Related concepts: {{ idea.one }}, {{ idea.two }}, and {{ idea.three }}</h4>
+<h4>Generated at {{ idea.time }}</h4>
+<br>
+<div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row row-cols-1 ">
+
+        {% if idea %}
+        <div class="col">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h2>{{ idea.prompt }}</h2>
+              <br>
+              <div class="card-text">
+                <h5>{{ idea.pitch }}</h5>
+                <br>
+                <h4>From related ideas {{ idea.one }}, {{ idea.two }}, {{ idea.three }}</h4>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif%}
+      </div>
+    </div>
+
+<div class="button_array">
+    <div class="idea_form">
+        <form action="/action" method="GET" class="go_button">
+            <input class="go_button" type="submit" value="Go back.">
+        </form>
+    </div>
+    
+    <div class="idea_form">
+        <form action="/edit/{{idea.id}}" method="GET" class="go_button">
+            <input class="go_button" type="submit" value="Edit.">
+        </form>
+    </div>
+
+    <div class="idea_form">
+        <form action="/delete/{{idea.id}}" method="GET" class="go_button">
+            <input class="go_button" type="submit" value="Delete.">
+        </form>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

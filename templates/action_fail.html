@@ -1,0 +1,14 @@
+{% extends 'base.html' %} 
+{% block head %}  
+<title> Welcome to $$$ </title>
+{% endblock %}
+
+{% block body %} 
+<h4> You entered incorrect values :( </h4>
+<p>Blank spaces and non-alphanumeric characters are not valid. </p>
+<div class="idea_form">
+    <form action="/action" method="GET" class="no_button">
+        <input class="go_button" type="submit" value="Try again.">
+    </form>
+</div>
+{% endblock %}

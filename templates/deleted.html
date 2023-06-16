@@ -1,0 +1,72 @@
+{% extends 'base.html' %} 
+{% block head %}  
+<title> Welcome to $$$ </title>
+{% endblock %}
+
+{% block body %}  
+    <div class="top">
+        <!-- A paragraph to explain. -->
+        <h2>Your expired ideas.</h2>
+    </div>
+    <div class="container">
+        <script> alert("This page displays your deleted ideas. If you decide to delete an idea from this page, it can't be undone!")</script>
+        <h4 class="explainText">
+            Here's your last chance. You can move these back to the 'active' category, or you can permanently delete them.
+        </h4>
+    </div>
+    <br>
+
+    <!-- Display the ideas that have been generated so far -->
+
+    {% if ideas|length < 1 %}
+
+    <div class="no_ideas">
+        <h2>No ideas have been deleted yet. You must be doing a good job!</h2>
+    </div>
+
+    {% else %}
+    <div class="idea_list">
+        <table>
+            <p>You can click on a prompt to view, edit, or delete it.</p>
+            <thead>
+                <th>
+                    Number
+                </th>
+                <th>
+                    Prompt word/phrase 
+                </th>
+                <th>
+                    Related ideas
+                </th>
+                <th>
+
+                </th>
+                <th>
+                    
+                </th>
+            </thead>
+            {% for idea in ideas %}
+            {% if idea.deleted %}
+            <tr>
+                <td>{{ idea.id }}</td>
+                <td><a href="/display/{{idea.id}}">{{ idea.prompt }}</a></td>
+                <td>{{ idea.one }}</td>
+                <td>{{ idea.two }}</td>
+                <td>{{ idea.three }}</td>
+                <td><a href="/deleted/{{idea.id}}">Delete</a></td>
+                <td><a href="/delete/{{idea.id}}">Undelete Me!</a></td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </table>
+    </div>
+
+    {% endif %}
+
+<div class="idea_form">
+    <form action="/action" method="GET" class="no_button">
+        <input class="go_button" type="submit" value="Return to main page">
+    </form>
+</div>
+
+{% endblock %}

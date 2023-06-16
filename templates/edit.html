@@ -1,0 +1,39 @@
+{% extends 'base.html' %} 
+{% block head %}  
+<title> Welcome to $$$ </title>
+{% endblock %}
+
+{% block body %}  
+    <div class="top">
+        <!-- A paragraph to explain. -->
+        <h2>Not satisfied? Make changes here.</h2>
+    </div>
+    <div class="container">
+        <h4 class="explainText">
+            You can use this page to edit the text of your generated idea.
+        </h4>
+        <br>
+    </div>
+
+
+    <div class="content headline">
+        <div class="row">
+        <h1>Edit idea: {{ idea.prompt }}</h1>
+        </div>
+        <div class="idea_list">
+            <div class="form">
+                <form action="/edit/{{idea.id}}" method="POST">
+                <input class="editbox" type="text" name="pitch" size="150" id="pitch" value="{{ idea.pitch }}">
+                <input type="submit" value="Make edits">
+                </form>
+            </div>
+        </div>
+    </div>
+
+<div class="idea_form">
+    <form action="/action" method="GET" class="no_button">
+        <input class="go_button" type="submit" value="Return to main page without editing">
+    </form>
+</div>
+
+{% endblock %}

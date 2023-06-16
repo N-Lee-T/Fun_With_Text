@@ -1,0 +1,94 @@
+{% extends 'base.html' %} 
+{% block head %}  
+<title> Welcome to $$$ </title>
+{% endblock %}
+
+{% block body %}  
+
+<div class="cols">
+    <div class="col1">
+        <!-- A paragraph to explain. -->
+        <h2>You've got the inspiration. </h2>
+        <h4 class="explainText">
+            You've got big ideas. Let us take them further.
+            
+            All you need to do is type a word or phrase into the box below, 
+            and click the button. 
+
+            Soon you'll have a workable idea to pitch to an excited audience
+            of free-wheeling VC funders who love to hear exciting new ideas. 
+        </h4>
+        <p>You can click on a prompt to view, edit, or delete it.</p>
+
+        <!-- Form for user to submit an idea -->
+        <div class="links-list">
+        <div class="idea_form">
+            <form action="/action" method="POST" class="idea_form">
+                <input type="text" name="prompt" id="prompt" minlength="1" maxlength="50" size="35" placeholder="Enter your idea prompt here.">
+                <select id="language" name="language">
+                    <option selected>English</option>
+                    <option>Spanish</option>
+                    <option>Chinese</option>
+                    <option>French</option>
+                    <option>Hindi</option>
+                  </select>
+                <input class="go_button" type="submit" value="Let's go!">
+            </form>
+        </div>
+        <br>
+        <div class="idea_form">
+            <form action="/deleted" method="GET">
+                <input class="go_button" type="submit" value="Deleted ideas">
+            </form>
+            <br>
+            <form action="/show_all" method="GET">
+                <input class="go_button" type="submit" value="Show all details">
+            </form>
+        </div>
+        </div>
+    </div>
+
+    <!-- Display the ideas that have been generated so far -->
+    <div class="col1">
+        {% if ideas|length < 1 %}
+        <h2>No ideas have been generated yet. Go ahead, try it!</h2>
+
+        {% else %}
+        <h2>We've got the right words.</h2>
+        <h6> You can click on any prompt word to view the entire idea </h6>
+        <div class="idea_list">
+            <table>
+                <thead>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Prompt 
+                    </th>
+                    <th>
+                        Related ideas
+                    </th>
+                    <th>
+                    </th>
+                    <th>
+                    </th>
+                </thead>
+                {% for idea in ideas %}
+                {% if not idea.deleted %}
+                <tr>
+                    <td>{{ idea.id }}</td>
+                    <td><a href="/display/{{idea.id}}">{{ idea.prompt }}</a></td>
+                    <td>{{ idea.one }}</td>
+                    <td>{{ idea.two }}</td>
+                    <td>{{ idea.three }}</td>
+                </tr>
+                {% endif %}
+                {% endfor %}
+            </table>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,601 @@
+
+.top-text {
+    width: 100%;
+    padding: 5%;
+    margin: 10px;
+    text-align: center;
+}
+
+.cols {
+    width: 100%;
+}
+
+.col1 {
+    width: 100%;
+}
+
+@media (min-width: 48em) {
+.col1 {
+    width: 50%;
+      float:left;
+    }
+    .cols {
+      content: "";
+      display: table;
+      clear: both;
+    }
+}
+
+.explainText {
+  padding: 5%;
+  margin: 5px;
+  text-align: center;
+  font-kerning: 5;
+  background-color: white;
+}
+
+html {
+    box-sizing: border-box;
+    background-size: auto;
+  }
+  
+body {
+    background-color: white;
+    text-align: center;
+  }
+  
+  /* Text styles  */
+  
+  .first-para {
+   text-align: left;
+   max-width: 75%;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  h1 {
+    font-size: calc(40px + 1vw);
+    font-family: "Arvo";
+    margin: auto;
+    padding-bottom: 20px;
+  }
+  
+  .top h1 {
+    font-family: "Shrikhand";
+  }
+
+  h2 {
+    color: black;
+    font-size: calc(30px + 1vw);
+    font-family: "Shrikhand";
+    padding-bottom: 10px;
+    margin: 5%;
+    position: relative;
+    font-kerning: 10%;
+  }
+  
+  .top-text {
+    color: white;
+    display: inline-block;
+    position: relative;
+    text-align: left;
+    margin: 25px auto 25px 25px;
+  }
+  
+  .top-head {
+    background:  #114E60;
+  }
+  
+  h3 {
+    font-size: calc(20px + 1vw);
+    /* color: white; */
+    font-family: "Arvo";
+    margin: 0 auto 0 auto;
+  }
+  
+  h4 {
+    font-size: calc(10px + 1vw);
+    font-family: "Arvo";
+    margin: 0 auto 0 auto;
+  }
+  
+  h5 {
+    font-size: calc(7px + 1vw);
+    font-family: "Arvo";
+    margin: 0 auto 0 auto;
+  
+  }
+  
+  h6 {
+    font-size: calc(4px + 1vw);
+    font-family: "Arvo";
+    margin: 0 auto 0 auto;
+  
+  }
+  
+  p {
+    font-family: "Open Sans";
+    margin: 0 auto 0 auto;
+    line-height: 2;
+  
+  }
+  
+  hr {
+    border: dotted #114E60 6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 100px auto;
+  }
+  
+  a {
+    margin: 10px 20px;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    background-color: #39FF14;
+    color: black;
+  }
+  
+  table {
+    border-spacing: 5px;
+  }
+  
+  td, th {
+    padding: 15px;
+  }
+  
+  .boxhover {
+    padding: 7% 15%;
+  }
+  
+  .boxhover:hover {
+    color: #39FF14;
+  }
+  
+  #colorEmph {
+    color:#39FF14;
+  }
+  
+  
+  #title {
+    padding: 7% 15%;
+  }
+  
+  #features {
+    padding: 2% 5%;
+    background-color: #114E60;
+    color: white;
+  }
+/*   
+  .intro {
+    font-family: "Shrikhand";
+  } */
+
+  .feature-box {
+    text-align: center;
+    padding: 5%;
+  }
+  
+  a { 
+    color: inherit; 
+    font-size: 1rem;
+  } 
+  
+  a h3 {
+    color: white;
+  }
+  
+  a h3:hover {
+    background-color: #39FF14;
+  }
+  
+  .icon {
+    color:#114E60;
+    margin-bottom: 1rem;
+  }
+  
+  .card-body {
+    text-align: center;
+    align-items: center;
+  }
+  
+  div h2 {
+    display: inline-block;
+  }
+  
+  .bottom-container {
+    background-color: #39FF14;
+    color: white;
+    justify-content: space-between;
+    padding: 50px 0 20px;
+  }
+  
+  
+  .intro {
+    width: 30%;
+    margin: 20px auto 20px;
+  }
+  
+  .nt-pic {
+    position: relative;
+    max-width: 25%;
+    opacity: 50%;
+    right: 100px;
+    float: right;
+    margin-left: 30px;
+  }
+  
+  .skill-row {
+    width: 50%;
+    margin: 100px auto 100px auto;
+    text-align: left;
+    line-height: 2;
+  }
+  
+  .explainText {
+    text-align:left;
+    margin-left: 10px;
+  }
+
+.para {
+    width: 80%;
+    background-color: #39FF14;
+    color:#114E60;
+}
+
+.editbot {
+    background-color: #114E60;
+    color:aliceblue;
+    width: 40%;
+    height: 20%;
+}
+
+.popup {
+    color:#39FF14;
+    background-color: #114E60;
+}
+
+  /* Pictures  */
+  
+  .pic1 {
+    position: relative;
+    float: left;
+    margin-right: 30px;
+    max-width: 25%;
+    opacity: 60%;
+  }
+  
+  .pic2 {
+    position: relative;
+    float: right;
+    margin-left: 30px;
+    max-width: 90%;
+    /* opacity: 60%; */
+    padding-top: 5%;
+  }
+  
+  .pic3 {
+    max-width: 30%;
+  }
+  
+  #pictures {
+    padding-top: 5%;
+    text-align: center;
+    color: #F4EEE8; 
+    background-color: white;
+  }
+  
+  .picture-carousel {
+    max-height: 30%;
+    position: static;
+  }
+  
+  .picture-frame {
+    align-items: center; 
+    padding: 5%;
+  }
+  
+  .frame-img {
+    padding-top: 10%;
+    max-width: 50%;
+  }
+  
+  .slide-image {
+    max-width: 20%;
+    /* width: 35%; */
+    margin: 20px;
+  }
+  
+  /* Contact */
+  
+  .contact-me {
+    width: 40%;
+    margin: 20px auto 20px;
+  }
+  
+  .contact-message {
+    margin: 20px auto;
+  }
+  
+
+  .intro {
+    width: 30%;
+    margin: 20px auto 20px;
+  }
+  
+  .nt-pic {
+    position: relative;
+    max-width: 25%;
+    opacity: 50%;
+    right: 100px;
+    float: right;
+    margin-left: 30px;
+  }
+  
+  .skill-row {
+    width: 50%;
+    margin: 100px auto 100px auto;
+    text-align: left;
+    line-height: 2;
+  }
+  
+  .explainText {
+    text-align:left;
+    margin-left: 10px;
+  }
+
+.para {
+    width: 80%;
+    background-color: #39FF14;
+    color:#114E60;
+}
+
+.editbot {
+    background-color: #114E60;
+    color:aliceblue;
+    width: 40%;
+    height: 20%;
+}
+
+.popup {
+    color:#39FF14;
+    background-color: #114E60;
+}
+
+  /* Pictures  */
+  
+  .pic1 {
+    position: relative;
+    float: left;
+    margin-right: 30px;
+    max-width: 25%;
+    opacity: 60%;
+  }
+  
+  .pic2 {
+    position: relative;
+    float: right;
+    margin-left: 30px;
+    max-width: 90%;
+    /* opacity: 60%; */
+    padding-top: 5%;
+  }
+  
+  .pic3 {
+    max-width: 30%;
+  }
+  
+  #pictures {
+    padding-top: 5%;
+    text-align: center;
+    color: #F4EEE8; 
+    background-color: white;
+  }
+  
+  .picture-carousel {
+    max-height: 30%;
+    position: static;
+  }
+  
+  .picture-frame {
+    align-items: center; 
+    padding: 5%;
+  }
+  
+  .frame-img {
+    padding-top: 10%;
+    max-width: 50%;
+  }
+  
+  .slide-image {
+    max-width: 20%;
+    /* width: 35%; */
+    margin: 20px;
+  }
+  
+  /* Contact */
+  
+  .contact-me {
+    width: 40%;
+    margin: 20px auto 20px;
+  }
+  
+  .contact-message {
+    margin: 20px auto;
+  }
+  
+  .links-list {
+    color: white;
+    font-family: "Arvo";
+    margin: 50px auto 100px;
+  }
+  
+  /* Buttons */
+  
+  .go_button {
+    border-radius: 0px;
+    font-family: "Arvo";
+    color: black;
+    font-size: 20px;
+    background: #39FF14;
+    margin: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+
+  .go_button:hover {
+    background: black;
+    color: #39FF14;
+    text-decoration: none;
+  }
+
+ .button_array {
+    display: flex;
+    width: 600px;
+    align-self: center;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 5%;
+    text-align: center;
+  }
+  
+    
+  #right-col {
+    padding-top: 3%;
+    padding-bottom: 3%;
+  
+  }
+  
+  /* Project page */
+  
+  .top {
+    background-color: #39FF14;
+    padding: 5%;
+    margin: 5px;
+    color: white;
+    text-align: left;
+    width: 100%;
+  }
+
+  .proj-top {
+    padding: 10% 20%;
+    /* max-width: 65%; */
+    align-items: center;
+  }
+  
+  .card-body {
+    align-items: center;
+  }
+  
+  .card-text {
+    text-align: left;
+  }
+  
+  .card-img-top {
+    opacity: 75%;
+    max-width: 75%;
+    align-self: center;
+    padding: 5%;
+  }
+  
+  /* About page  */
+  
+  .intro-self {
+    padding: 10%;
+  }
+  
+  .abt-img {
+    opacity: 25%;
+    padding-top: 5%;
+    z-index: -1;
+   }
+  
+   .desc-self {
+    padding: 10%;
+    text-align: left;
+   }
+  
+  .desc-self h3 {
+    padding-top: 35%;
+    color:#114E60;
+  }
+  
+  .intro-emp {
+    padding: 10%;
+    text-align: left;
+  }
+  
+  .exp-img {
+    max-width: 95%;
+    padding-left: 5%;
+  }   #right-col {
+    padding-top: 3%;
+    padding-bottom: 3%;
+  
+  }
+  
+  /* Project page */
+  
+  .top {
+    background-color: #39FF14;
+    padding: 5%;
+    margin: 5px;
+    color: white;
+    text-align: left;
+    width: 100%;
+  }
+
+  .proj-top {
+    padding: 10% 20%;
+    /* max-width: 65%; */
+    align-items: center;
+  }
+  
+  .card-body {
+    align-items: center;
+  }
+  
+  .card-text {
+    text-align: left;
+  }
+  
+  .card-img-top {
+    opacity: 75%;
+    max-width: 75%;
+    align-self: center;
+    padding: 5%;
+  }
+  
+  /* About page  */
+  
+  .intro-self {
+    padding: 10%;
+  }
+  
+  .abt-img {
+    opacity: 25%;
+    padding-top: 5%;
+    z-index: -1;
+   }
+  
+   .desc-self {
+    padding: 10%;
+    text-align: left;
+   }
+  
+  .desc-self h3 {
+    padding-top: 35%;
+    color:#114E60;
+  }
+  
+  .intro-emp {
+    padding: 10%;
+    text-align: left;
+  }
+  
+  .exp-img {
+    max-width: 95%;
+    padding-left: 5%;
+  }

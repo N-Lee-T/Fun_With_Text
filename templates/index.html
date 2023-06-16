@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<header>
+    <!-- <link href="static/styles.css" type="css"> -->
+    <title>Hey man!</title>
+</header>
+
+{% extends 'base.html' %} 
+{% block head %}  
+<title> Welcome to $$$ </title>
+{% endblock %}
+
+
+<!-- <body> -->
+{% block body %}  
+<div class="cols">
+    <div class="col1">
+        <div class="explainText">
+            <h2>We'll do the thinking. </h2>
+            <h3> Generate the Next Big Thing! </h3>
+            <h4>With three easy steps, you'll have the idea that will make you rich!!</h4>
+            <h4>1. Enter your prompt (a word or phrase, no more than two words) into a text input box. </h4>
+            <h4>2. Press a button  </h4>
+            <h4>3. Watch a new idea come to life! </h4>
+        </div>
+    </div>
+    <div class="col1">
+        <div class="explainText">
+            <h2>Are you ready?</h2>
+            <br>
+            <form action="/action", method="GET">
+                <p> This button will take you to the next page, where you can start using the idea generator.</p>
+                <button type="submit" class="go_button">I'm ready.</button> <!--Whatever, just get something to work for now-->
+                <p> If you're not ready, this button will take you somewhere else. Are you feeling adventurous? </p>
+                <button type="submit" class="no_button"><i><a href="https://en.wikipedia.org/wiki/Special:Random">Whatever.</a></i></button> <!--Redirect to wikipedia rando-->
+            </form>
+        </div>
+    </div>
+</div>
+    <div class="footer">
+
+    </div>
+{% endblock %}
+<!-- </body> -->
